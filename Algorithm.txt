@@ -1,0 +1,49 @@
+Name: ATMSimulation // PIN code intentionnaly ignored to focus on transactions logic
+Role: Simulate an ATM with 3 options (Withdraw, Deposit et Exit)
+Input: choice, amount // amount type depends on choice
+Output: balance, messages (menu, errors, confirmation, End) // errors : choice < 1 OR choice > 3, negative or null amount, withdrawed amount > balance
+Declaration: choice, amount, balance : integers
+
+Start
+    balance <-- 5000 // simulated data
+
+    output("Welcome, please select one of the following options :")
+
+    repeat
+         output("Your Current Balance is :")
+         output("1 : Withdraw")
+         output("2 : Deposit")    // Menu
+         output("3 : Exit")    
+         input(choice)
+
+         if (choice = 1) then // option 1
+           output("Choose the amount to withdraw")
+           input(amount)
+
+           if (amount > 0 AND amount <= balance) then
+             balance <-- balance - amount
+             output("Transaction Successful, Thank You.")
+           else 
+             output("Error, Choose Another Amount.")
+           End if
+
+         else if (choice = 2) then // option 2
+           output("Choose the amount to deposit")
+           input(amount)
+
+           if (amount > 0) then
+             balance <-- balance + amount
+             output("Transaction Successful, Thank You.")
+           else
+             output("Error, Choose Another Amount.")
+           End if
+
+         else if (choice < 1 OR choice > 3) then // option inexistent
+           output("Error, Select Another Choice.")
+         End if 
+
+     until (choice = 3)
+
+       output("Session ended. Goodbye.") // End
+End
+    
