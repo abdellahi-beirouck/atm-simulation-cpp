@@ -45,5 +45,4 @@ Start
      until (choice = 3)
 
        output("Session ended. Goodbye.") // End
-End
-    
+End 
