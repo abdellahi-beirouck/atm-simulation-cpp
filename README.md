@@ -14,7 +14,7 @@ Initial testing revealed that entering a letter instead of a number would lock t
 *   **Solution:** Implemented `cin.fail()` checks immediately after every input. The program detects the error, resets the stream with `cin.clear()`, and clears the buffer using `cin.ignore(10000, '\n')` (discarding up to 10,000 characters until the Enter key is pressed). Finally, the variable is reset to `0` so the user can safely try again.
 
 ## Project Files
-*   `algorithm.txt` - The pseudo-code blueprint designed to plan the logic before writing any C++.
+*   `Algorithm.txt` - The pseudo-code blueprint designed to plan the logic before writing any C++.
 *   `main.cpp` - The C++ source code.
 
 ## Execution
