@@ -23,4 +23,4 @@ Initial testing revealed that entering a letter instead of a number would lock t
 **Transparency & Methodology Note:** 
 I used an AI assistant as a discussion partner to debate the core logic of both the algorithm and the C++ implementation, diagnose the `cin` buffer issue, and help structure this README. 
 
-I wrote the initial `algorithm.txt` blueprint, designed the transaction rules, built the final C++ implementation, and performed all testing and verification. During testing, I also spotted and fixed a logic bug where selecting "Quit" would incorrectly trigger the error message before exiting, by changing the final `else` to `else if (choice != 3)`.
+I wrote the initial `algorithm.txt` blueprint, designed the transaction rules, built the final C++ implementation, and performed all testing and verification. During testing, I also spotted and fixed a logic bug where selecting "Quit" would incorrectly trigger the error message before exiting.
