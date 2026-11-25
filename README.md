@@ -14,7 +14,8 @@ Initial testing revealed that entering a letter instead of a number would lock t
 *   **Solution:** Implemented `cin.fail()` checks immediately after every input. The program detects the error, resets the stream with `cin.clear()`, and clears the buffer using `cin.ignore(10000, '\n')` (discarding up to 10,000 characters until the Enter key is pressed). Finally, the variable is reset to `0` so the user can safely try again.
 
 ## Execution
-1. Compile (requires a C++ compiler like g++): `g++ main.cpp -o atm`
+1. Compile the code which requires a C++ compiler (this outputs an executable named `atm`):
+   `g++ main.cpp -o atm`
 2. Run the executable:
    * Linux/macOS: `./atm`
    * Windows: `atm.exe`
