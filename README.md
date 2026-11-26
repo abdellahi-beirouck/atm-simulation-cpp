@@ -18,7 +18,7 @@ Initial testing revealed that entering a letter instead of a number would lock t
 *   `main.cpp` - The C++ source code.
 
 ## Execution
-1. Compile the code which requires a C++ compiler (this outputs an executable named `atm`):
+1. Compile the code, which requires a C++ compiler (this outputs an executable named `atm`):
    `g++ main.cpp -o atm`
 2. Run the executable:
    * Linux/macOS: `./atm`
